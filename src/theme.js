@@ -19,6 +19,7 @@ const theme = createTheme({
         },
         h3: {
           letterSpacing: "-3px",
+          fontSize: "36px",
         },
         h4: {
           letterSpacing: "-2px",

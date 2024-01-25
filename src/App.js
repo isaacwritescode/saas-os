@@ -2,7 +2,8 @@ import { ThemeProvider } from "@mui/material";
 import theme from "./theme";
 import Navbar from "./components/Navbar";
 import Hero from "./pages/Hero";
-import Sponsors from "./pages/Hero/Sponsors";
+import Sponsors from "./pages/Sponsors";
+import Features from "./pages/Features";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Hero />
       <Sponsors />
+      <Features />
     </ThemeProvider>
   );
 }

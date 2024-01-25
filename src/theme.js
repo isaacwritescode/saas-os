@@ -11,14 +11,16 @@ const theme = createTheme({
       },
     },
   },
-
-  palette:{
+  typography: {
+    fontFamily: "NeurialGrotesk-Private",
+  },
+  palette: {
     mode: "light",
-    primary:{
-        contrastText: "#000",
-        main: "#71E83A"
-    }
-  }
+    primary: {
+      contrastText: "#000",
+      main: "#71E83A",
+    },
+  },
 });
 
 export default theme;

@@ -1,6 +1,63 @@
+/* Fonts */
+
+@font-face {
+  font-family: "NeurialGrotesk-Private";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/public/fonts/neurial-grotesk/NeurialGrotesk-Light.otf");
+}
+
+@font-face {
+  font-family: "NeurialGrotesk-Private";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/public/fonts/neurial-grotesk/NeurialGrotesk-Regular.otf");
+}
+
+@font-face {
+  font-family: "NeurialGrotesk-Private";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/public/fonts/neurial-grotesk/NeurialGrotesk-Medium.otf");
+}
+
+@font-face {
+  font-family: "NeurialGrotesk-Private";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/public/fonts/neurial-grotesk/NeurialGrotesk-Bold.otf");
+}
+
+@font-face {
+  font-family: "NeurialGrotesk-Private";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/public/fonts/neurial-grotesk/NeurialGrotesk-Extrabold.otf");
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
 body{
   width: 100%;
   max-width: 2560px;
   margin: auto;
   overflow-x: hidden;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(162, 162, 167);
+  border-radius: 100px;
 }

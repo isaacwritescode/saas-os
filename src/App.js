@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./pages/Hero";
 import Sponsors from "./pages/Sponsors";
 import Features from "./pages/Features";
+import Projects from "./pages/Projects";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <Sponsors />
       <Features />
+      <Projects />
     </ThemeProvider>
   );
 }

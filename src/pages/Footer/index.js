@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <Box width="100%" pt={16} pb={8} maxWidth={1000} m="auto">
       <Box width={{ xs: "90%", lg: "80%" }} m="auto">
-        <Grid container>
+        <Grid container columns={{ xs: 6, md: 12 }} spacing={{ xs: 4, md: 0 }}>
           <Grid item xs={6}>
             <Stack spacing={2} alignItems="start" pr={8}>
               <img src="/logo.svg" height={48} alt="logo" />
@@ -17,8 +17,8 @@ const Footer = () => {
               <SocialLinks />
             </Stack>
           </Grid>
-          <Grid item xs={6} borderLeft={1} borderColor="grey.300">
-            <Box display="grid" gridTemplateColumns="1fr 1fr" pl={8}>
+          <Grid item xs={6} borderLeft={{ md: 1 }} borderColor="grey.300">
+            <Box display="grid" gridTemplateColumns="1fr 1fr" pl={{ md: 8 }}>
               {FOOTER_LINKS.map(({ title, path }, idx) => {
                 return (
                   <Link

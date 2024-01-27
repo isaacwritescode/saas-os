@@ -3,12 +3,13 @@ import FEATURES from "./constants";
 
 const Features = () => {
   return (
-    <Box maxWidth={1000} width="100%" m="auto">
+    <Box maxWidth={1000} width={{ xs: "90%", md: "100%" }} m="auto">
       {FEATURES.map(({ icon, label, title, desc, gif }, idx) => (
         <Grid
           container
           key={idx}
           py={16}
+          columns={{ xs: 6, md: 12 }}
           direction={idx % 2 === 0 ? "row" : "row-reverse"}
         >
           <Grid item xs={6}>

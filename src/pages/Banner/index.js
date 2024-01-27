@@ -2,10 +2,17 @@ import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 
 const Banner = () => {
   return (
-    <Box maxWidth={1000} width="100%" m="auto">
-      <Grid container alignItems="center" borderRadius={6} bgcolor="#1B1B2C" overflow="hidden">
+    <Box maxWidth={1000} width={{ xs: "90%", md: "100%" }} m="auto">
+      <Grid
+        container
+        alignItems="center"
+        borderRadius={6}
+        bgcolor="#1B1B2C"
+        overflow="hidden"
+        columns={{ xs: 6, md: 12 }}
+      >
         <Grid item xs={6}>
-          <Stack spacing={1} px={8} alignItems="start">
+          <Stack spacing={1} px={8} alignItems="start" py={{ xs: 8, md: 0 }}>
             <Typography color="white" variant="h3">
               SaaS Development made easy
             </Typography>
@@ -18,7 +25,10 @@ const Banner = () => {
           </Stack>
         </Grid>
         <Grid item xs={6}>
-          <img src="/banner/screenshots.png" style={{maxHeight: 300, width: "100%"}} />
+          <img
+            src="/banner/screenshots.png"
+            style={{ maxHeight: 300, width: "100%" }}
+          />
         </Grid>
       </Grid>
     </Box>

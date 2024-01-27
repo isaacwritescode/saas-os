@@ -6,6 +6,7 @@ import Sponsors from "./pages/Sponsors";
 import Features from "./pages/Features";
 import Projects from "./pages/Projects";
 import Banner from "./pages/Banner";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Features />
       <Projects />
       <Banner />
+      <Footer />
     </ThemeProvider>
   );
 }

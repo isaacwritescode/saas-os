@@ -2,7 +2,10 @@ import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 
 const Hero = () => {
   return (
-    <Box bgcolor="primary.light" sx={{backgroundImage: "url(/hero/illus/boxes.svg)"}}>
+    <Box
+      bgcolor="primary.light"
+      sx={{ backgroundImage: "url(/hero/illus/boxes.svg)" }}
+    >
       <Box width={{ xs: "90%", lg: "80%" }} m="auto" maxWidth={1000}>
         <Stack spacing={4} alignItems={{ xs: "start", md: "center" }} py={18}>
           <Stack spacing={2} textAlign={{ xs: "left", md: "center" }}>
@@ -30,8 +33,8 @@ const Hero = () => {
           >
             <Grid item xs={4}>
               <Stack spacing={{ xs: 1.5, md: 3 }}>
-                <img src="/hero/illus/05.svg" width="100%" />
-                <img src="/hero/illus/04.svg" width="100%" />
+                <img src="/hero/illus/03.svg" width="100%" />
+                <img src="/hero/illus/06.svg" width="100%" />
               </Stack>
             </Grid>
             <Grid item xs={8}>

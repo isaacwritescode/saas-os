@@ -10,7 +10,7 @@ const FEATURES = [
         \n
 For those unique requirements, custom components can be seamlessly developed and integrated, ensuring your application stands out in the market.
         `,
-    gif: "",
+    gif: "/videos/1.mp4",
   },
   {
     icon: <FaBeer />,
@@ -21,7 +21,7 @@ For those unique requirements, custom components can be seamlessly developed and
     \n
     Our intelligent zero-code approach means you can focus on strategy and innovation, rather than getting bogged down in technical details.
         `,
-    gif: "",
+    gif: "/videos/2.mp4",
   },
   {
     icon: <FaBeer />,
@@ -31,7 +31,7 @@ For those unique requirements, custom components can be seamlessly developed and
     Our customers have zero operational overhead of managing development, demo, staging, and production environments.
     \n
     SaaS OS offers a zero-ops solution that automates these processes, significantly reducing the complexity and cost of operations while ensuring your environments are always optimized for performance.`,
-    gif: "",
+    gif: "/videos/2.mp4",
   },
 ];
 

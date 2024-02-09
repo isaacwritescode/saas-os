@@ -8,8 +8,10 @@ const Features = () => {
         <Grid
           container
           key={idx}
+          spacing={8}
           py={16}
           columns={{ xs: 6, md: 12 }}
+          alignItems="center"
           direction={idx % 2 === 0 ? "row" : "row-reverse"}
         >
           <Grid item xs={6}>
@@ -22,7 +24,9 @@ const Features = () => {
               <Typography variant="body1">{desc}</Typography>
             </Stack>
           </Grid>
-          <Grid item xs={6}></Grid>
+          <Grid item xs={6}>
+            <video width="100%" src={gif} autoPlay loop />
+          </Grid>
         </Grid>
       ))}
     </Box>

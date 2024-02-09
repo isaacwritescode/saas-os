@@ -10,14 +10,16 @@ const Projects = () => {
           See what you can build with SaaS OS
         </Typography>
       </Stack>
-      <Grid container spacing={3} columns={{ xs: 4, md: 8 }}>
+      <Grid container spacing={3} columns={{ xs: 4, sm: 8, md: 12 }}>
         {PROJECTS.map(({ title, desc, src }, idx) => {
           return (
             <Grid item xs={4}>
               <Stack spacing={1} key={idx}>
                 <img src={src} />
                 <Typography variant="h6">{title}</Typography>
-                <Typography variant="body1" color="text.secondary">{desc}</Typography>
+                <Typography variant="body1" color="text.secondary">
+                  {desc}
+                </Typography>
               </Stack>
             </Grid>
           );

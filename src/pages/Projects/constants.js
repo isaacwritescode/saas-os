@@ -1,20 +1,19 @@
 const PROJECTS = [
   {
-    title: "Sample project#1",
+    title: "Scheduling Platform",
     desc: "This is a sample short description",
-    src: "/projects/placeholder.svg",
+    src: "/projects/Scheduling Platform.png",
   },
   {
-    title: "Sample project#2",
+    title: "Headless Commerce",
     desc: "This is a sample short description",
-    src: "/projects/placeholder.svg",
+    src: "/projects/Headless Commerce.png",
   },
   {
-    title: "Sample project#3",
+    title: "CRM",
     desc: "This is a sample short description",
-    src: "/projects/placeholder.svg",
+    src: "/projects/CRM.png",
   },
 ];
-
 
 export default PROJECTS;

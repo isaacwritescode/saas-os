@@ -14,12 +14,9 @@ const Projects = () => {
         {PROJECTS.map(({ title, desc, src }, idx) => {
           return (
             <Grid item xs={4}>
-              <Stack spacing={1} key={idx}>
+              <Stack spacing={2} key={idx}>
                 <img src={src} />
-                <Typography variant="h6">{title}</Typography>
-                <Typography variant="body1" color="text.secondary">
-                  {desc}
-                </Typography>
+                <Typography textAlign="center" variant="h6">{title}</Typography>
               </Stack>
             </Grid>
           );

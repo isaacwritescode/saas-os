@@ -1,10 +1,12 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import FEATURES from "./constants";
+import { DotLottiePlayer, Controls } from "@dotlottie/react-player";
+import "@dotlottie/react-player/dist/index.css";
 
 const Features = () => {
   return (
     <Box maxWidth={1000} width={{ xs: "90%", md: "100%" }} m="auto">
-      {FEATURES.map(({ icon, label, title, desc, gif }, idx) => (
+      {FEATURES.map(({ icon, label, title, desc, lottie }, idx) => (
         <Grid
           container
           key={idx}
@@ -25,7 +27,7 @@ const Features = () => {
             </Stack>
           </Grid>
           <Grid item xs={6}>
-            <video width="100%" src={gif} autoPlay loop />
+            <DotLottiePlayer src={lottie} autoplay loop />
           </Grid>
         </Grid>
       ))}

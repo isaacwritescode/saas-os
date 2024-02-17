@@ -8,7 +8,7 @@ const theme = createTheme({
             fontWeight: 500,
         },
         h1: {
-          letterSpacing: "-4px",
+          letterSpacing: "-3px",
           lineHeight: 1.2,
           fontSize: "56px",
         },

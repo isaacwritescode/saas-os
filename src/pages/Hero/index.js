@@ -7,18 +7,26 @@ const Hero = () => {
       sx={{ backgroundImage: "url(/hero/illus/boxes.svg)" }}
     >
       <Box width={{ xs: "90%", lg: "80%" }} m="auto" maxWidth={1000}>
-        <Stack spacing={4} alignItems={{ xs: "start", md: "center" }} py={18}>
-          <Stack spacing={2} textAlign={{ xs: "left", md: "center" }}>
+        <Stack spacing={4} alignItems={{ xs: "start", md: "center" }} py={12}>
+          <Stack
+            spacing={2}
+            textAlign={{ xs: "left", md: "center" }}
+            maxWidth={600}
+            alignItems="center"
+            mx="auto"
+          >
             <Typography variant="h1">
               Design SaaS products in minutes
             </Typography>
-            <Typography variant="body1" color="grey.700">
-              The world's easiest-to-use SaaS Development and ideation tool -
-              powered by AI.
-              <br />
-              <br />
-              No coding experience required!
-            </Typography>
+            <Box width={{ md: "80%" }}>
+              <Typography variant="body1" color="grey.700">
+                The world's easiest-to-use SaaS Development and ideation tool,
+                powered by AI.
+                <br />
+                <br />
+                No coding experience required!
+              </Typography>
+            </Box>
           </Stack>
           <Button size="large" variant="contained">
             Join waitlist

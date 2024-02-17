@@ -1,8 +1,8 @@
-import { FaBeer } from "react-icons/fa";
+import { BiBrush, BiServer, BiSliderAlt } from "react-icons/bi";
 
 const FEATURES = [
   {
-    icon: <FaBeer />,
+    icon: <BiBrush />,
     label: "UI DESIGNER",
     title: "AI Assisted UI Development",
     desc: `
@@ -13,18 +13,18 @@ For those unique requirements, custom components can be seamlessly developed and
     lottie: "/animations/1.lottie",
   },
   {
-    icon: <FaBeer />,
+    icon: <BiSliderAlt />,
     label: "WORKFLOW",
     title: "Intelligent API and Workflow Integration",
     desc: `
     SaaS OS simplifies the creation of REST and GraphQL APIs, workflows, and third-party integrations, all without writing a single line of code.
-    \n
+    
     Our intelligent zero-code approach means you can focus on strategy and innovation, rather than getting bogged down in technical details.
         `,
     lottie: "/animations/2.lottie",
   },
   {
-    icon: <FaBeer />,
+    icon: <BiServer />,
     label: "ENVIRONMENTS",
     title: "Zero-Ops Environments",
     desc: `

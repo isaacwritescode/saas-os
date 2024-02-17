@@ -5,13 +5,13 @@ import "@dotlottie/react-player/dist/index.css";
 
 const Features = () => {
   return (
-    <Box maxWidth={1000} width={{ xs: "90%", md: "100%" }} m="auto">
+    <Box maxWidth={1000} width={{ xs: "90%", md: "100%" }} mx="auto" py={12}>
       {FEATURES.map(({ icon, label, title, desc, lottie }, idx) => (
         <Grid
           container
           key={idx}
           spacing={8}
-          py={16}
+          py={12}
           columns={{ xs: 6, md: 12 }}
           alignItems="center"
           direction={idx % 2 === 0 ? "row" : "row-reverse"}
@@ -23,7 +23,12 @@ const Features = () => {
             </Stack>
             <Stack spacing={2}>
               <Typography variant="h2">{title}</Typography>
-              <Typography variant="body1">{desc}</Typography>
+              <Typography variant="body1" color="text.secondary">
+                {desc.split(".")[0]}
+              </Typography>
+              <Typography variant="body1" color="text.secondary">
+                {desc.split(".")[1]}
+              </Typography>
             </Stack>
           </Grid>
           <Grid item xs={6}>

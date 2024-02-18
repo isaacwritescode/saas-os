@@ -42,8 +42,8 @@ function App() {
       <Features />
       <Projects />
       <FAQ />
-      <Banner />
-      <Footer />
+      <Banner setModalOpen={setModalOpen} />
+      <Footer setModalOpen={setModalOpen} />
       <Modal modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <Menu
         isMenuVisible={isMenuVisible}

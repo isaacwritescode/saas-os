@@ -8,19 +8,15 @@ import {
 export const FOOTER_LINKS = [
   {
     title: "Features",
-    path: "#roadmap",
+    path: "/#features",
   },
   {
     title: "Projects",
-    path: "#projects",
+    path: "/#projects",
   },
   {
     title: "FAQ",
-    path: "#FAQ",
-  },
-  {
-    title: "Sign up",
-    path: "#sign-up",
+    path: "/#FAQ",
   },
 ];
 

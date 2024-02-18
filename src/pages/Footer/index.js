@@ -3,7 +3,7 @@ import { Link } from "@mui/material";
 import { FOOTER_LINKS } from "./constants";
 import { SocialLinks } from "./SocialLinks";
 
-const Footer = () => {
+const Footer = ({ setModalOpen }) => {
   return (
     <Box width="100%" pt={16} pb={8} maxWidth={1000} m="auto">
       <Box width={{ xs: "90%", lg: "80%" }} m="auto">
@@ -39,6 +39,22 @@ const Footer = () => {
                   </Link>
                 );
               })}
+              <Typography
+                variant="h6"
+                color="text.secondary"
+                onClick={() => setModalOpen(true)}
+                textAlign={{ xs: "left", md: "center" }}
+                py={4}
+                sx={{
+                  "&:hover": {
+                    color: "text.primary",
+                    textDecoration: "underline",
+                    cursor: "pointer",
+                  },
+                }}
+              >
+                Join waitlist
+              </Typography>
             </Box>
           </Grid>
         </Grid>

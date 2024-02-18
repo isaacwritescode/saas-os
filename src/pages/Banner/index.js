@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 
-const Banner = () => {
+const Banner = ({ setModalOpen }) => {
   return (
     <Box maxWidth={1000} width={{ xs: "90%", md: "100%" }} m="auto">
       <Grid
@@ -20,7 +20,9 @@ const Banner = () => {
               Anyone can have a great idea, now everyone can bring them to life.
             </Typography>
             <Box pt={2}>
-              <Button variant="contained">Join waitlist</Button>
+              <Button onClick={() => setModalOpen(true)} variant="contained">
+                Join waitlist
+              </Button>
             </Box>
           </Stack>
         </Grid>

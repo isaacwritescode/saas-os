@@ -11,25 +11,24 @@ import FAQ from "./pages/FAQ";
 import { useEffect, useState } from "react";
 import Modal from "./pages/Modal";
 import Menu from "./components/Menu";
+import sal from "sal.js";
+import "sal.js/dist/sal.css";
+import { useLocation } from "react-router-dom";
 
 function App() {
+  const { pathname } = useLocation();
   const [modalOpen, setModalOpen] = useState(false);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
-  const [userHasScrolled, setUserHasScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      window.scrollY === 0
-        ? setUserHasScrolled(false)
-        : setUserHasScrolled(true);
-    };
-
     if (isMenuVisible) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "auto";
-
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
   }, [isMenuVisible]);
+
+  useEffect(() => {
+    sal({ threshold: 0.3 });
+  }, [pathname]);
+
   return (
     <ThemeProvider theme={theme}>
       <Navbar

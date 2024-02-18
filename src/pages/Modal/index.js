@@ -1,4 +1,3 @@
-import { useTheme } from "@emotion/react";
 import { Close } from "@mui/icons-material";
 import {
   Box,
@@ -7,7 +6,6 @@ import {
   Stack,
   TextField,
   Typography,
-  createTheme,
 } from "@mui/material";
 
 const Modal = ({ modalOpen, setModalOpen }) => {

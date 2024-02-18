@@ -16,9 +16,20 @@ export default function Navbar({
           justifyContent="space-between"
           alignItems="center"
         >
-          <img src="logos/light.svg" height={36} alt="logo" />
+          <img
+            src="logos/light.svg"
+            height={36}
+            alt="logo"
+            data-sal="slide-up"
+            data-sal-delay={100}
+          />
           <Box display={{ xs: "none", md: "block" }}>
-            <Stack direction="row" spacing={3}>
+            <Stack
+              direction="row"
+              spacing={3}
+              data-sal="slide-up"
+              data-sal-delay={200}
+            >
               {LINKS.map(({ url, title }, idx) => {
                 return (
                   <HashLink
@@ -35,7 +46,12 @@ export default function Navbar({
             </Stack>
           </Box>
           <Box display={{ xs: "none", md: "block" }}>
-            <Button size="small" variant="contained">
+            <Button
+              data-sal="slide-up"
+              data-sal-delay={300}
+              size="small"
+              variant="contained"
+            >
               Join waitlist
             </Button>
           </Box>
@@ -65,9 +81,20 @@ export default function Navbar({
           justifyContent="space-between"
           alignItems="center"
         >
-          <img src="logos/dark.svg" height={36} alt="logo" />
+          <img
+            src="logos/dark.svg"
+            height={36}
+            alt="logo"
+            data-sal="slide-up"
+            data-sal-delay={100}
+          />
           <Box display={{ xs: "none", md: "block" }}>
-            <Stack direction="row" spacing={3}>
+            <Stack
+              direction="row"
+              spacing={3}
+              data-sal="slide-up"
+              data-sal-delay={200}
+            >
               {LINKS.map(({ url, title }, idx) => {
                 return (
                   <HashLink
@@ -84,13 +111,15 @@ export default function Navbar({
             </Stack>
           </Box>
           <Box display={{ xs: "none", md: "block" }}>
-            <Button
-              onClick={() => setModalOpen(true)}
-              size="small"
-              variant="contained"
-            >
-              Join waitlist
-            </Button>
+            <Box data-sal="slide-up" data-sal-delay={300}>
+              <Button
+                onClick={() => setModalOpen(true)}
+                size="small"
+                variant="contained"
+              >
+                Join waitlist
+              </Button>
+            </Box>
           </Box>
           <Box display={{ xs: "block", md: "none" }}>
             <IconButton onClick={() => setIsMenuVisible(!isMenuVisible)}>

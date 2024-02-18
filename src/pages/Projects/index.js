@@ -12,15 +12,28 @@ const Projects = () => {
       pt={16}
     >
       <Stack spacing={1} mb={8} textAlign="center">
-        <Typography variant="h2">What would you like to build?</Typography>
-        <Typography variant="body1" color="text.secondary">
+        <Typography variant="h2" data-sal="slide-up" data-sal-delay={100}>
+          What would you like to build?
+        </Typography>
+        <Typography
+          variant="body1"
+          color="text.secondary"
+          data-sal="slide-up"
+          data-sal-delay={100}
+        >
           See what you can build with SaaS OS
         </Typography>
       </Stack>
       <Grid container spacing={3} columns={{ xs: 4, sm: 8, md: 12 }}>
         {PROJECTS.map(({ title, desc, src }, idx) => {
           return (
-            <Grid key={idx} item xs={4}>
+            <Grid
+              data-sal="slide-up"
+              data-sal-delay={idx * 100}
+              key={idx}
+              item
+              xs={4}
+            >
               <Stack
                 spacing={2}
                 sx={{

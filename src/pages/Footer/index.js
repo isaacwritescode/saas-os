@@ -1,9 +1,18 @@
-import { Box, Divider, Grid, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Stack,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import { Link } from "@mui/material";
 import { FOOTER_LINKS } from "./constants";
 import { SocialLinks } from "./SocialLinks";
+import { useTheme } from "@emotion/react";
 
 const Footer = ({ setModalOpen }) => {
+  const theme = useTheme();
+  const md = useMediaQuery(theme.breakpoints.up("md"));
   return (
     <Box width="100%" pt={16} pb={8} maxWidth={1000} m="auto">
       <Box width={{ xs: "90%", lg: "80%" }} m="auto">
@@ -17,11 +26,16 @@ const Footer = ({ setModalOpen }) => {
               <SocialLinks />
             </Stack>
           </Grid>
-          <Grid item xs={6} borderLeft={{ md: 1 }} borderColor="grey.300">
+          <Grid
+            item
+            xs={6}
+            sx={{ borderLeft: md ? 1 : 0, borderLeftColor: "grey.300" }}
+          >
             <Box display="grid" gridTemplateColumns="1fr 1fr" pl={{ md: 8 }}>
               {FOOTER_LINKS.map(({ title, path }, idx) => {
                 return (
                   <Link
+                    key={idx}
                     variant="h6"
                     color="text.secondary"
                     textAlign={{ xs: "left", md: "center" }}

@@ -15,11 +15,16 @@ const Hero = ({ setModalOpen }) => {
             alignItems="center"
             mx="auto"
           >
-            <Typography variant="h1">
+            <Typography variant="h1" data-sal="slide-up" data-sal-delay={400}>
               Design SaaS products in minutes
             </Typography>
             <Box width={{ md: "80%" }}>
-              <Typography variant="body1" color="grey.700">
+              <Typography
+                data-sal="slide-up"
+                data-sal-delay={500}
+                variant="body1"
+                color="grey.700"
+              >
                 The world's easiest-to-use SaaS Development and ideation tool,
                 powered by AI.
                 <br />
@@ -28,13 +33,15 @@ const Hero = ({ setModalOpen }) => {
               </Typography>
             </Box>
           </Stack>
-          <Button
-            size="large"
-            variant="contained"
-            onClick={() => setModalOpen(true)}
-          >
-            Join waitlist
-          </Button>
+          <Box data-sal="slide-up" data-sal-delay={600}>
+            <Button
+              size="large"
+              variant="contained"
+              onClick={() => setModalOpen(true)}
+            >
+              Join waitlist
+            </Button>
+          </Box>
         </Stack>
         <Box>
           <Grid
@@ -45,12 +52,12 @@ const Hero = ({ setModalOpen }) => {
           >
             <Grid item xs={4}>
               <Stack spacing={{ xs: 1.5, md: 3 }}>
-                <img src="/hero/illus/03.svg" width="100%" />
-                <img src="/hero/illus/06.svg" width="100%" />
+                <img src="/hero/illus/03.svg" width="100%" alt="" />
+                <img src="/hero/illus/06.svg" width="100%" alt="" />
               </Stack>
             </Grid>
             <Grid item xs={8}>
-              <img src="/hero/illus/02.svg" width="100%" />
+              <img src="/hero/illus/02.svg" width="100%" alt="" />
             </Grid>
           </Grid>
           <Grid
@@ -61,21 +68,21 @@ const Hero = ({ setModalOpen }) => {
           >
             <Grid item xs={3}>
               <Stack spacing={{ xs: 1.5, md: 3 }}>
-                <img src="/hero/illus/05.svg" width="100%" />
-                <img src="/hero/illus/04.svg" width="100%" />
+                <img src="/hero/illus/05.svg" width="100%" alt="" />
+                <img src="/hero/illus/04.svg" width="100%" alt="" />
               </Stack>
             </Grid>
             <Grid item xs={3}>
               <Stack spacing={{ xs: 1.5, md: 3 }}>
-                <img src="/hero/illus/03.svg" width="100%" />
-                <img src="/hero/illus/06.svg" width="100%" />
+                <img src="/hero/illus/03.svg" width="100%" alt="" />
+                <img src="/hero/illus/06.svg" width="100%" alt="" />
               </Stack>
             </Grid>
             <Grid item xs={4.5}>
-              <img src="/hero/illus/02.svg" width="100%" />
+              <img src="/hero/illus/02.svg" width="100%" alt="" />
             </Grid>
             <Grid item xs={1.5}>
-              <img src="/hero/illus/01.svg" width="100%" />
+              <img src="/hero/illus/01.svg" width="100%" alt="" />
             </Grid>
           </Grid>
         </Box>

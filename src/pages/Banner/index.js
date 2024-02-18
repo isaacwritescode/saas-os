@@ -13,13 +13,23 @@ const Banner = ({ setModalOpen }) => {
       >
         <Grid item xs={6}>
           <Stack spacing={1} px={8} alignItems="start" py={{ xs: 8, md: 0 }}>
-            <Typography color="white" variant="h3">
+            <Typography
+              color="white"
+              variant="h3"
+              data-sal="slide-up"
+              data-sal-delay={100}
+            >
               SaaS Development made easy
             </Typography>
-            <Typography color="grey.500" variant="body1">
+            <Typography
+              color="grey.500"
+              variant="body1"
+              data-sal="slide-up"
+              data-sal-delay={200}
+            >
               Anyone can have a great idea, now everyone can bring them to life.
             </Typography>
-            <Box pt={2}>
+            <Box pt={2} data-sal="slide-up" data-sal-delay={300}>
               <Button onClick={() => setModalOpen(true)} variant="contained">
                 Join waitlist
               </Button>
@@ -29,6 +39,7 @@ const Banner = ({ setModalOpen }) => {
         <Grid item xs={6}>
           <img
             src="/banner/screenshots.png"
+            alt=""
             style={{ maxHeight: 300, width: "100%" }}
           />
         </Grid>

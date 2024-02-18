@@ -3,7 +3,14 @@ import PROJECTS from "./constants";
 
 const Projects = () => {
   return (
-    <Box maxWidth={1000} width={{ xs: "90%", md: "100%" }} mx="auto" mb={16}>
+    <Box
+      id="projects"
+      maxWidth={1000}
+      width={{ xs: "90%", md: "100%" }}
+      mx="auto"
+      mb={16}
+      pt={16}
+    >
       <Stack spacing={1} mb={8} textAlign="center">
         <Typography variant="h2">What would you like to build?</Typography>
         <Typography variant="body1">
@@ -16,7 +23,9 @@ const Projects = () => {
             <Grid item xs={4}>
               <Stack spacing={2} key={idx}>
                 <img src={src} />
-                <Typography textAlign="center" variant="h6">{title}</Typography>
+                <Typography textAlign="center" variant="h6">
+                  {title}
+                </Typography>
               </Stack>
             </Grid>
           );

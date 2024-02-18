@@ -5,7 +5,13 @@ import "@dotlottie/react-player/dist/index.css";
 
 const Features = () => {
   return (
-    <Box maxWidth={1000} width={{ xs: "90%", md: "100%" }} mx="auto" py={12}>
+    <Box
+      id="features"
+      maxWidth={1000}
+      width={{ xs: "90%", md: "100%" }}
+      mx="auto"
+      pt={12}
+    >
       {FEATURES.map(({ icon, label, title, desc, lottie }, idx) => (
         <Grid
           container

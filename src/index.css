@@ -35,10 +35,14 @@
   src: url("/public/fonts/neurial-grotesk/NeurialGrotesk-Extrabold.otf");
 }
 
+
 * {
   -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  scroll-behavior: smooth;
 }
-
 
 body{
   width: 100%;

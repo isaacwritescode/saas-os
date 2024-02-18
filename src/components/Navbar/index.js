@@ -1,7 +1,56 @@
-import { Box, Button, Stack } from "@mui/material";
+import { Box, Button, IconButton, Stack, Typography } from "@mui/material";
+import LINKS from "./constants";
+import { HashLink } from "react-router-hash-link";
+import { Close, Menu } from "@mui/icons-material";
 
-export default function Navbar() {
-  return (
+export default function Navbar({
+  isMenuVisible,
+  setIsMenuVisible,
+  setModalOpen,
+}) {
+  return isMenuVisible ? (
+    <Box position="sticky" top={0} bgcolor="transparent" zIndex={999}>
+      <Box width={{ xs: "90%", md: "70%" }} m="auto" py={1}>
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+        >
+          <img src="logos/light.svg" height={36} alt="logo" />
+          <Box display={{ xs: "none", md: "block" }}>
+            <Stack direction="row" spacing={3}>
+              {LINKS.map(({ url, title }, idx) => {
+                return (
+                  <HashLink
+                    key={idx}
+                    to={url}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Typography color="text.secondary" variant="body2">
+                      {title}
+                    </Typography>
+                  </HashLink>
+                );
+              })}
+            </Stack>
+          </Box>
+          <Box display={{ xs: "none", md: "block" }}>
+            <Button size="small" variant="contained">
+              Join waitlist
+            </Button>
+          </Box>
+          <Box display={{ xs: "block", md: "none" }}>
+            <IconButton
+              sx={{ color: "white" }}
+              onClick={() => setIsMenuVisible(!isMenuVisible)}
+            >
+              <Close />
+            </IconButton>
+          </Box>
+        </Stack>
+      </Box>
+    </Box>
+  ) : (
     <Box
       position="sticky"
       top={0}
@@ -11,11 +60,43 @@ export default function Navbar() {
       zIndex={999}
     >
       <Box width={{ xs: "90%", md: "70%" }} m="auto" py={1}>
-        <Stack direction="row" justifyContent="space-between">
-          <img src="logo.svg" height={36} alt="logo" />
-          <Button size="small" variant="contained">
-            Join waitlist
-          </Button>
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+        >
+          <img src="logos/dark.svg" height={36} alt="logo" />
+          <Box display={{ xs: "none", md: "block" }}>
+            <Stack direction="row" spacing={3}>
+              {LINKS.map(({ url, title }, idx) => {
+                return (
+                  <HashLink
+                    key={idx}
+                    to={url}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Typography color="text.secondary" variant="body2">
+                      {title}
+                    </Typography>
+                  </HashLink>
+                );
+              })}
+            </Stack>
+          </Box>
+          <Box display={{ xs: "none", md: "block" }}>
+            <Button
+              onClick={() => setModalOpen(true)}
+              size="small"
+              variant="contained"
+            >
+              Join waitlist
+            </Button>
+          </Box>
+          <Box display={{ xs: "block", md: "none" }}>
+            <IconButton onClick={() => setIsMenuVisible(!isMenuVisible)}>
+              <Menu />
+            </IconButton>
+          </Box>
         </Stack>
       </Box>
     </Box>

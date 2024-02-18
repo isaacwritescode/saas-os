@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 
-const Hero = () => {
+const Hero = ({ setModalOpen }) => {
   return (
     <Box
       bgcolor="primary.light"
@@ -28,7 +28,11 @@ const Hero = () => {
               </Typography>
             </Box>
           </Stack>
-          <Button size="large" variant="contained">
+          <Button
+            size="large"
+            variant="contained"
+            onClick={() => setModalOpen(true)}
+          >
             Join waitlist
           </Button>
         </Stack>

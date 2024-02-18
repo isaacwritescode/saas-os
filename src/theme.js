@@ -4,8 +4,8 @@ const theme = createTheme({
   components: {
     MuiTypography: {
       styleOverrides: {
-        root:{
-            fontWeight: 500,
+        root: {
+          fontWeight: 500,
         },
         h1: {
           letterSpacing: "-3px",
@@ -52,6 +52,10 @@ const theme = createTheme({
       contrastText: "#000",
       light: "#F8FFF5",
       main: "#71E83A",
+    },
+    black: {
+      contrastText: "#ffffff",
+      main: "#000000",
     },
   },
 });

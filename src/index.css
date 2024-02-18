@@ -61,3 +61,26 @@ body{
   background-color: rgb(162, 162, 167);
   border-radius: 100px;
 }
+
+/* Animations */
+.fade-in {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.fade-out {
+  visibility: visible !important;
+  opacity: 0 !important;
+}
+
+.pop-in {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.pop-out {
+  visibility: visible !important;
+  opacity: 0 !important;
+  transform: scale(0) !important;
+}

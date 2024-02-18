@@ -16,8 +16,8 @@ const Features = () => {
         <Grid
           container
           key={idx}
-          spacing={12}
-          pb={idx == FEATURES.length - 1 ? 16 : 32}
+          spacing={{ xs: 4, md: 12 }}
+          pb={{ xs: 12, md: idx == FEATURES.length - 1 ? 16 : 32 }}
           columns={{ xs: 6, md: 12 }}
           alignItems="center"
           direction={idx % 2 === 0 ? "row" : "row-reverse"}

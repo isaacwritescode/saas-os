@@ -32,6 +32,9 @@ const theme = createTheme({
           letterSpacing: "-0.5px",
           lineHeight: 1.3,
         },
+        body1:{
+          fontSize: "17px"
+        }
       },
     },
     MuiButton: {
@@ -50,6 +53,11 @@ const theme = createTheme({
     mode: "light",
     primary: {
       contrastText: "#000",
+      light: "#F8FFF5",
+      main: "#71E83A",
+    },
+    primaryInverted: {
+      contrastText: "#fff",
       light: "#F8FFF5",
       main: "#71E83A",
     },

@@ -67,7 +67,7 @@ const Footer = ({ setModalOpen }) => {
                   },
                 }}
               >
-                Join waitlist
+                Apply for Beta
               </Typography>
             </Box>
           </Grid>

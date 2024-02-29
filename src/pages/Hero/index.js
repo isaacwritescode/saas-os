@@ -39,7 +39,7 @@ const Hero = ({ setModalOpen }) => {
               variant="contained"
               onClick={() => setModalOpen(true)}
             >
-              Join waitlist
+              Apply for Beta
             </Button>
           </Box>
         </Stack>

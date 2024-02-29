@@ -1,6 +1,28 @@
-import { Box, Button, Grid, Stack, Typography } from "@mui/material";
+import { useTheme } from "@emotion/react";
+import {
+  Box,
+  Button,
+  Grid,
+  Stack,
+  TextField,
+  ThemeProvider,
+  Typography,
+  createTheme,
+} from "@mui/material";
 
 const Banner = ({ setModalOpen }) => {
+  const theme = useTheme();
+  const newTheme = createTheme({
+    ...theme,
+    palette: {
+      mode: "dark",
+      primary: {
+        contrastText: "#fff",
+        light: "#F8FFF5",
+        main: "#71E83A",
+      },
+    },
+  });
   return (
     <Box maxWidth={1000} width={{ xs: "90%", md: "100%" }} m="auto">
       <Grid
@@ -27,13 +49,20 @@ const Banner = ({ setModalOpen }) => {
               data-sal="slide-up"
               data-sal-delay={200}
             >
-              Anyone can have a great idea, now everyone can bring them to life.
+              Join our newsletter and never miss out on the fun!
             </Typography>
-            <Box pt={2} data-sal="slide-up" data-sal-delay={300}>
-              <Button onClick={() => setModalOpen(true)} variant="contained">
-                Join waitlist
-              </Button>
-            </Box>
+            <Stack direction="row" alignItems="center" spacing={2}>
+              <Box flex={1}>
+                <ThemeProvider theme={newTheme}>
+                  <TextField variant="outlined" size="small" fullWidth label="Email" type="email" />
+                </ThemeProvider>
+              </Box>
+              <Box data-sal="slide-up" data-sal-delay={300}>
+                <Button onClick={() => setModalOpen(true)} variant="contained">
+                  Join newsletter
+                </Button>
+              </Box>
+            </Stack>
           </Stack>
         </Grid>
         <Grid item xs={6}>

@@ -49,7 +49,7 @@ const Features = () => {
             </Stack>
           </Grid>
           <Grid item xs={6}>
-            {/* <DotLottiePlayer src={lottie} autoplay loop renderer="html"  /> */}
+            <DotLottiePlayer src={lottie} autoplay loop   />
           </Grid>
         </Grid>
       ))}

@@ -52,7 +52,7 @@ export default function Navbar({
               size="small"
               variant="contained"
             >
-              Join waitlist
+              Apply for Beta
             </Button>
           </Box>
           <Box display={{ xs: "block", md: "none" }}>
@@ -117,7 +117,7 @@ export default function Navbar({
                 size="small"
                 variant="contained"
               >
-                Join waitlist
+                Apply for Beta
               </Button>
             </Box>
           </Box>

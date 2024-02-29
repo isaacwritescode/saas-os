@@ -51,7 +51,7 @@ const Menu = ({ isMenuVisible, setIsMenuVisible, setModalOpen }) => {
                 variant="contained"
                 fullWidth
               >
-                Join waitlist
+                Apply for Beta
               </Button>
             </Box>
           </Box>

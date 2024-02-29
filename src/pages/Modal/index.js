@@ -82,7 +82,7 @@ const Modal = ({ modalOpen, setModalOpen }) => {
                 required
               />
               <Button type="submit" variant="contained">
-                Join waitlist
+                Apply for Beta
               </Button>
             </Stack>
           </form>

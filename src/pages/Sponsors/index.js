@@ -16,23 +16,16 @@ const Sponsors = () => {
         >
           <Marquee>
             {SPONSORS.map(({ src }, idx) => (
-              <Box px={4}>
-                <img
-                  src={src}
-                  idx={idx}
-                  alt={"sponsor"}
-                  style={{ filter: "grayscale(1)" }}
-                />
-              </Box>
-            ))}
-            {SPONSORS.map(({ src }, idx) => (
-              <Box px={4}>
-                <img
-                  src={src}
-                  idx={idx}
-                  alt={"sponsor"}
-                  style={{ filter: "grayscale(1)" }}
-                />
+              <Box
+                px={4}
+                sx={{
+                  filter: "grayscale(1)",
+                  transition: "all ease 0.3s",
+                  cursor: "pointer",
+                  "&:hover": { filter: "grayscale(0)" },
+                }}
+              >
+                <img height={64} src={src} idx={idx} alt={"sponsor"} />
               </Box>
             ))}
           </Marquee>

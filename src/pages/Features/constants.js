@@ -1,4 +1,4 @@
-import { BiBrush, BiServer, BiSliderAlt } from "react-icons/bi";
+import { BiSliderAlt } from "react-icons/bi";
 
 const FEATURES = [
 //   {

@@ -2,12 +2,14 @@ import { Box, Button, IconButton, Stack, Typography } from "@mui/material";
 import LINKS from "./constants";
 import { HashLink } from "react-router-hash-link";
 import { Close, Menu } from "@mui/icons-material";
+import { useTheme } from "@emotion/react";
 
 export default function Navbar({
   isMenuVisible,
   setIsMenuVisible,
   setModalOpen,
 }) {
+  const theme = useTheme();
   return isMenuVisible ? (
     <Box position="sticky" top={0} bgcolor="transparent" zIndex={999}>
       <Box width={{ xs: "90%", md: "70%" }} m="auto" py={1}>
@@ -70,9 +72,9 @@ export default function Navbar({
     <Box
       position="sticky"
       top={0}
-      bgcolor="white"
+      bgcolor="background.default"
       borderBottom={1}
-      borderColor="grey.300"
+      borderColor="divider"
       zIndex={999}
     >
       <Box width={{ xs: "90%", md: "70%" }} m="auto" py={1}>
@@ -81,13 +83,18 @@ export default function Navbar({
           justifyContent="space-between"
           alignItems="center"
         >
-          <img
-            src="logos/dark.svg"
-            height={36}
-            alt="logo"
-            data-sal="slide-up"
-            data-sal-delay={100}
-          />
+          <Box data-sal="slide-up" data-sal-delay={100}>
+            <img
+              src={
+                theme.palette.mode === "dark"
+                  ? "logos/light.svg"
+                  : "logos/dark.svg"
+              }
+              height={36}
+              alt="logo"
+            />
+          </Box>
+
           <Box display={{ xs: "none", md: "block" }}>
             <Stack
               direction="row"

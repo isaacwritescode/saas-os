@@ -1,7 +1,9 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import PROJECTS from "./constants";
+import { useTheme } from "@emotion/react";
 
 const Projects = () => {
+  const theme = useTheme();
   return (
     <Box
       id="projects"
@@ -12,20 +14,19 @@ const Projects = () => {
       pt={16}
     >
       <Stack spacing={1} mb={8} textAlign="center">
-        <Typography variant="h2" data-sal="slide-up" data-sal-delay={100}>
-          What would you like to build?
-        </Typography>
-        <Typography
-          variant="body1"
-          color="text.secondary"
-          data-sal="slide-up"
-          data-sal-delay={100}
-        >
-          See what you can build with SaaS OS
-        </Typography>
+        <Box data-sal="slide-up" data-sal-delay={100}>
+          <Typography variant="h2" color="text.primary">
+            What would you like to build?
+          </Typography>
+        </Box>
+        <Box data-sal="slide-up" data-sal-delay={100}>
+          <Typography variant="body1" color="text.secondary">
+            See what you can build with SaaS OS
+          </Typography>
+        </Box>
       </Stack>
       <Grid container spacing={3} columns={{ xs: 4, sm: 8, md: 12 }}>
-        {PROJECTS.map(({ title, desc, src }, idx) => {
+        {PROJECTS.map(({ title, src }, idx) => {
           return (
             <Grid
               data-sal="slide-up"
@@ -43,7 +44,13 @@ const Projects = () => {
                   cursor: "pointer",
                 }}
               >
-                <Box bgcolor="#f2f3f5" flex={1} borderRadius={2}>
+                <Box
+                  bgcolor={
+                    theme.palette.mode === "dark" ? "grey.900" : "grey.200"
+                  }
+                  flex={1}
+                  borderRadius={2}
+                >
                   <img
                     src={src}
                     alt={title}
@@ -56,7 +63,11 @@ const Projects = () => {
                     }}
                   />
                 </Box>
-                <Typography textAlign="center" variant="h6">
+                <Typography
+                  textAlign="center"
+                  variant="h6"
+                  color="text.primary"
+                >
                   {title}
                 </Typography>
               </Stack>

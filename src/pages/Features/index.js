@@ -23,20 +23,20 @@ const Features = () => {
           direction={idx % 2 === 0 ? "row" : "row-reverse"}
         >
           <Grid item xs={6}>
-            <Stack
-              data-sal="slide-up"
-              data-sal-delay={100}
-              direction="row"
-              spacing={1}
-              pb={1}
-            >
-              {icon}
-              <Typography variant="body2">{label}</Typography>
-            </Stack>
+            <Box data-sal="slide-up" data-sal-delay={100}>
+              <Stack direction="row" spacing={1} pb={1} color="text.primary">
+                {icon}
+                <Typography variant="body2" color="text.primary">
+                  {label}
+                </Typography>
+              </Stack>
+            </Box>
             <Stack spacing={2}>
-              <Typography variant="h2" data-sal="slide-up" data-sal-delay={100}>
-                {title}
-              </Typography>
+              <Box data-sal="slide-up" data-sal-delay={100}>
+                <Typography color="text.primary" variant="h2">
+                  {title}
+                </Typography>
+              </Box>
               <Box data-sal="slide-up" data-sal-delay={200}>
                 <Typography variant="body1" color="text.secondary">
                   {desc.split(".")[0]}
@@ -49,7 +49,7 @@ const Features = () => {
             </Stack>
           </Grid>
           <Grid item xs={6}>
-            <DotLottiePlayer src={lottie} autoplay loop   />
+            <DotLottiePlayer src={lottie} autoplay loop />
           </Grid>
         </Grid>
       ))}

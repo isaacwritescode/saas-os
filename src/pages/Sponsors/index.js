@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 
 const Sponsors = () => {
   return (
-    <Box bgcolor="white">
+    <Box bgcolor="background.default">
       <Box maxWidth={1000} width="100%" m="auto">
         <Stack
           py={8}
@@ -19,10 +19,8 @@ const Sponsors = () => {
               <Box
                 px={4}
                 sx={{
-                  filter: "grayscale(1)",
                   transition: "all ease 0.3s",
                   cursor: "pointer",
-                  "&:hover": { filter: "grayscale(0)" },
                 }}
               >
                 <img height={64} src={src} idx={idx} alt={"sponsor"} />

@@ -1,10 +1,4 @@
-import {
-  Box,
-  Grid,
-  Stack,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
 import { Link } from "@mui/material";
 import { FOOTER_LINKS } from "./constants";
 import { SocialLinks } from "./SocialLinks";
@@ -19,7 +13,11 @@ const Footer = ({ setModalOpen }) => {
         <Grid container columns={{ xs: 6, md: 12 }} spacing={{ xs: 4, md: 0 }}>
           <Grid item xs={6}>
             <Stack spacing={2} alignItems="start" pr={8}>
-              <img src="/logo.svg" height={48} alt="logo" />
+              <img
+                src={theme.palette.mode === "dark" ? "logos/light.svg" : "logos/dark.svg"}
+                height={48}
+                alt="logo"
+              />
               <Typography variant="body1" color="text.secondary">
                 Build production ready apps using our AI powered chatbot
               </Typography>
@@ -29,7 +27,7 @@ const Footer = ({ setModalOpen }) => {
           <Grid
             item
             xs={6}
-            sx={{ borderLeft: md ? 1 : 0, borderLeftColor: "grey.300" }}
+            sx={{ borderLeft: md ? 1 : 0, borderLeftColor: "divider" }}
           >
             <Box display="grid" gridTemplateColumns="1fr 1fr" pl={{ md: 8 }}>
               {FOOTER_LINKS.map(({ title, path }, idx) => {

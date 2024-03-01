@@ -7,22 +7,25 @@ import Typography from "@mui/material/Typography";
 import { AddCircleOutline, RemoveCircleOutline } from "@mui/icons-material";
 import { useMediaQuery } from "@mui/material";
 
-const CustomAccordion = styled((props) => (
-  <MuiAccordion
-    disableGutters
-    elevation={0}
-    square
-    sx={{
-      "&.Mui-expanded": {
-        bgcolor: "#00000010",
-        borderRadius: 4,
-      },
-      bgcolor: "transparent",
-      borderRadius: 0,
-    }}
-    {...props}
-  />
-))(({ theme, expanded, md }) => ({
+const CustomAccordion = styled((props) => {
+  const theme = useTheme();
+  return (
+    <MuiAccordion
+      disableGutters
+      elevation={0}
+      square
+      sx={{
+        "&.Mui-expanded": {
+          bgcolor: theme.palette.mode === "dark" ? "grey.900" : "grey.200",
+          borderRadius: 4,
+        },
+        bgcolor: "transparent",
+        borderRadius: 0,
+      }}
+      {...props}
+    />
+  );
+})(({ theme, expanded, md }) => ({
   "&:before": {
     display: "none",
   },

@@ -2,8 +2,12 @@ import { Box, Grid, Stack, Typography } from "@mui/material";
 import FEATURES from "./constants";
 import { DotLottiePlayer } from "@dotlottie/react-player";
 import "@dotlottie/react-player/dist/index.css";
+import { useTheme } from "@emotion/react";
+import { grey } from "@mui/material/colors";
 
 const Features = () => {
+  const theme = useTheme();
+
   return (
     <Box
       id="features"
@@ -49,7 +53,17 @@ const Features = () => {
             </Stack>
           </Grid>
           <Grid item xs={6}>
-            <DotLottiePlayer src={lottie} autoplay loop />
+            <DotLottiePlayer
+              style={{
+                borderRadius: 8,
+                overflow: "hidden",
+                background:
+                  theme.palette.mode === "dark" ? "#ffffff70" : grey[200],
+              }}
+              src={lottie}
+              autoplay
+              loop
+            />
           </Grid>
         </Grid>
       ))}

@@ -1,4 +1,11 @@
-import { Box, Button, IconButton, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  IconButton,
+  Stack,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import LINKS from "./constants";
 import { HashLink } from "react-router-hash-link";
 import { Close, Menu } from "@mui/icons-material";
@@ -10,6 +17,8 @@ export default function Navbar({
   setModalOpen,
 }) {
   const theme = useTheme();
+  const md = useMediaQuery(theme.breakpoints.up("md"));
+
   return isMenuVisible ? (
     <Box position="sticky" top={0} bgcolor="transparent" zIndex={999}>
       <Box width={{ xs: "90%", md: "70%" }} m="auto" py={1}>
@@ -18,13 +27,7 @@ export default function Navbar({
           justifyContent="space-between"
           alignItems="center"
         >
-          <img
-            src="logos/light.svg"
-            height={36}
-            alt="logo"
-            data-sal="slide-up"
-            data-sal-delay={100}
-          />
+          <img src="logos/light.svg" height={36} alt="logo" />
           <Box display={{ xs: "none", md: "block" }}>
             <Stack
               direction="row"
@@ -83,17 +86,15 @@ export default function Navbar({
           justifyContent="space-between"
           alignItems="center"
         >
-          <Box data-sal="slide-up" data-sal-delay={100}>
-            <img
-              src={
-                theme.palette.mode === "dark"
-                  ? "logos/light.svg"
-                  : "logos/dark.svg"
-              }
-              height={36}
-              alt="logo"
-            />
-          </Box>
+          <img
+            src={
+              theme.palette.mode === "dark"
+                ? "logos/light.svg"
+                : "logos/dark.svg"
+            }
+            height={36}
+            alt="logo"
+          />
 
           <Box display={{ xs: "none", md: "block" }}>
             <Stack

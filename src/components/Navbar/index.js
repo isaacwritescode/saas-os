@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  IconButton,
-  Stack,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Button, IconButton, Stack, Typography } from "@mui/material";
 import LINKS from "./constants";
 import { HashLink } from "react-router-hash-link";
 import { Close, Menu } from "@mui/icons-material";
@@ -17,7 +10,6 @@ export default function Navbar({
   setModalOpen,
 }) {
   const theme = useTheme();
-  const md = useMediaQuery(theme.breakpoints.up("md"));
 
   return isMenuVisible ? (
     <Box position="sticky" top={0} bgcolor="transparent" zIndex={999}>

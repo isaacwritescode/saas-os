@@ -10,8 +10,8 @@ const Projects = () => {
       maxWidth={1000}
       width={{ xs: "90%", md: "100%" }}
       mx="auto"
-      mb={16}
-      pt={16}
+      mb={8}
+      pt={8}
     >
       <Stack spacing={1} mb={8} textAlign="center">
         <Box data-sal="slide-up" data-sal-delay={100}>

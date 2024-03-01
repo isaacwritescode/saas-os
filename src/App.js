@@ -1,4 +1,4 @@
-import { Box, ThemeProvider, createTheme } from "@mui/material";
+import { Box, ThemeProvider, createTheme, useMediaQuery } from "@mui/material";
 import myTheme from "./theme";
 import Navbar from "./components/Navbar";
 import Hero from "./pages/Hero";
@@ -23,7 +23,9 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
 
-  const [mode, setMode] = useState("light");
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+
+  const [mode, setMode] = useState(prefersDarkMode ? "dark" : "light");
   const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
@@ -39,7 +41,7 @@ function App() {
         ...myTheme,
         palette: {
           mode,
-          primary: myTheme.palette.primary
+          primary: myTheme.palette.primary,
         },
       }),
     [mode]

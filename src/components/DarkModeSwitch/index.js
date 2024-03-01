@@ -6,7 +6,7 @@ const DarkModeSwitch = ({ ColorModeContext }) => {
   const colorMode = useContext(ColorModeContext);
 
   return (
-    <Box position="fixed" bottom={24} right={24}>
+    <Box position="fixed" bottom={24} right={24} >
       <IconButton onClick={colorMode.toggleColorMode} size="large">
         <ContrastIcon />
       </IconButton>

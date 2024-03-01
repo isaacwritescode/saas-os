@@ -34,7 +34,7 @@ const Banner = ({ setModalOpen }) => {
         columns={{ xs: 6, md: 12 }}
       >
         <Grid item xs={6}>
-          <Stack spacing={1} px={8} alignItems="start" py={{ xs: 8, md: 0 }}>
+          <Stack spacing={1} px={6} alignItems="start" py={{ xs: 6, md: 0 }}>
             <Typography
               color="white"
               variant="h3"
@@ -51,10 +51,21 @@ const Banner = ({ setModalOpen }) => {
             >
               Join our newsletter and never miss out on the fun!
             </Typography>
-            <Stack direction="row" alignItems="center" spacing={2}>
+            <Stack
+              direction={{ xs: "column", sm: "row" }}
+              alignItems={{ xs: "start", sm: "center" }}
+              spacing={2}
+              py={1}
+            >
               <Box flex={1}>
                 <ThemeProvider theme={newTheme}>
-                  <TextField variant="outlined" size="small" fullWidth label="Email" type="email" />
+                  <TextField
+                    variant="outlined"
+                    size="small"
+                    fullWidth
+                    label="Email"
+                    type="email"
+                  />
                 </ThemeProvider>
               </Box>
               <Box data-sal="slide-up" data-sal-delay={300}>

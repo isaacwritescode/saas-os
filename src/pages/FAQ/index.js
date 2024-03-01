@@ -19,10 +19,9 @@ const FAQ = () => {
               <Typography
                 variant={sm ? "h1" : "h2"}
                 textAlign="center"
-                fontWeight={600}
                 color="text.primary"
               >
-                FAQ
+                Frequently Asked Questions
               </Typography>
             </Box>
             <AccordionGroup expanded={expanded} handleChange={handleChange} />

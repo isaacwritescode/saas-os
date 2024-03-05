@@ -69,9 +69,7 @@ const Banner = ({ setModalOpen }) => {
                 </ThemeProvider>
               </Box>
               <Box data-sal="slide-up" data-sal-delay={300}>
-                <Button onClick={() => setModalOpen(true)} variant="contained">
-                  Join newsletter
-                </Button>
+                <Button variant="contained">Join newsletter</Button>
               </Box>
             </Stack>
           </Stack>

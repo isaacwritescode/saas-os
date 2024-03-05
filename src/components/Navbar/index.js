@@ -113,7 +113,7 @@ export default function Navbar({
           <Box display={{ xs: "none", md: "block" }}>
             <Box data-sal="slide-up" data-sal-delay={300}>
               <Button
-                onClick={() => setModalOpen(true)}
+                onClick={() => window.open("https://applyforbeta.saasos.ai")}
                 size="small"
                 variant="contained"
               >

@@ -44,7 +44,7 @@ const Menu = ({ isMenuVisible, setIsMenuVisible, setModalOpen }) => {
             ))}
           </Stack>
           <Box mb={4} width="90%" mx="auto">
-            <Box onClick={() => setModalOpen(true)}>
+            <Box onClick={() => window.open("https://applyforbeta.saasos.ai")}>
               <Button
                 color="primary"
                 size="medium"

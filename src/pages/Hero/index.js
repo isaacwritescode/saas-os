@@ -29,9 +29,11 @@ const Hero = ({ setModalOpen }) => {
             : "url(/hero/illus/boxes.svg)",
       }}
     >
-      <Box position="absolute" top={32} left={0} right={0}>
-        <img src="/hero/illus/glow.svg" width="100%" alt="" />
-      </Box>
+      {theme.palette.mode === "dark" && (
+        <Box position="absolute" top={32} left={0} right={0}>
+          <img src="/hero/illus/glow.png" width="100%" alt="" />
+        </Box>
+      )}
       <Box width={{ xs: "90%", lg: "80%" }} m="auto" maxWidth={1000}>
         <Stack spacing={4} alignItems={{ xs: "start", md: "center" }} py={12}>
           <Stack
@@ -48,7 +50,7 @@ const Hero = ({ setModalOpen }) => {
             </Box>
             <Box width={{ md: "80%" }}>
               <Box data-sal="slide-up" data-sal-delay={500}>
-                <Typography variant="body1" color="grey.700">
+                <Typography variant="body1" color="text.secondary">
                   The world's easiest-to-use SaaS Development and ideation tool,
                   powered by AI.
                   <br />
@@ -62,7 +64,7 @@ const Hero = ({ setModalOpen }) => {
             <Button
               size="large"
               variant="contained"
-              onClick={() => setModalOpen(true)}
+              onClick={() => window.open("https://applyforbeta.saasos.ai")}
             >
               Apply for Beta
             </Button>

@@ -54,7 +54,7 @@ const Footer = ({ setModalOpen }) => {
               <Typography
                 variant="h6"
                 color="text.secondary"
-                onClick={() => setModalOpen(true)}
+                onClick={() => window.open("https://applyforbeta.saasos.ai")}
                 textAlign={{ xs: "left", md: "center" }}
                 py={4}
                 sx={{

@@ -53,7 +53,7 @@ const theme = createTheme({
     mode: "light",
     primary: {
       contrastText: "#000",
-      light: "#F8FFF5",
+      light: "#F4FFEF",
       main: "#71E83A",
     },
     primaryInverted: {
